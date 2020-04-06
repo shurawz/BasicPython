@@ -3,8 +3,8 @@
 # with open("cities.txt", 'w') as tet:
 #     for line in cities:
 #         print(line, file=tet)
-#
-#
+
+
 
 cities =[]
 # with open("cities.txt", 'r') as tet:
