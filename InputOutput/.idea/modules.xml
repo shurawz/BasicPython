@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Binary/Binary.iml" filepath="$PROJECT_DIR$/Binary/Binary.iml" />
       <module fileurl="file://$PROJECT_DIR$/InputOutput.iml" filepath="$PROJECT_DIR$/InputOutput.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pickle/Pickle.iml" filepath="$PROJECT_DIR$/Pickle/Pickle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shelve/Shelve.iml" filepath="$PROJECT_DIR$/Shelve/Shelve.iml" />
     </modules>
   </component>
 </project>
