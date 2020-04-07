@@ -1,0 +1,25 @@
+In Python shelve you access the keys randomly. 
+In order to access the keys randomly in python shelve we use open() function. 
+This function works a lot like the file open() function in File handling. 
+
+Syntax for open the file using Python shelve
+	shelve.open(filename, flag='c' , writeback=True)
+
+In Order to access the keys randomly in shelve in Python, we have to take three steps:
+
+	1) Storing Python shelve data
+	2) Retrieving Python shelve data
+	3) Updating Python shelve data
+
+Storing Python shelve data :
+
+	In order to store python shelve data, we have to create a file with full of datasets and open them with a 
+	open() function this function open a file which we have created.
+
+Storing Python shelve data :
+	In order to store python shelve data, we have to create a file with full of datasets and open them with a 
+	open() function this function open a file which we have created.
+
+Updating Python shelve data :
+	In order to update a python shelve data, we use append() function or we can easily update as we do in lists 
+	and in other data types. In order to make our changes permanent we use sync() function.
