@@ -1,6 +1,6 @@
 import shelve
 
-# Important Note: When the with block is finishes, the program file is closed.
+# Important Note: When the with block finishes, the program file is closed.
 # By which we cannot access the file now onwards.
 
 with shelve.open("frui") as fruit:
