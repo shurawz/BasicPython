@@ -1,5 +1,4 @@
 import time
-# from time import get_clock_info
 
 clk1 = time.time()
 print("Information on first clock is: {} " .format(clk1))
