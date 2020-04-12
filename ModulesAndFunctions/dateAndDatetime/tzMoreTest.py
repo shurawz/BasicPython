@@ -8,9 +8,9 @@ print("Naive local time is {}.".format(local_time))
 print("Naive utc time is {}.".format(utc_time))
 
 aware_local_time = pytz.utc.localize(local_time).astimezone()
-# If above line of code is executed, it leads to print UTC on line 16
+# If above line of code is executed, it leads to print UTC on line 19
 # If above line of code is followed by .astimezone() and executed, it leads to print place name from where it is executing
-# on line 16
+# on line 19
 # astimezone() means according to the current timezone from where the code is executing
 
 
