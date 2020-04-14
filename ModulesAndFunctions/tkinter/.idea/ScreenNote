@@ -1,0 +1,7 @@
+REMEMBER: Default value of the sticky is always 'centre'.
+
+Line 13 should bring the 'Tkinter Grid Demo' in the middle but it doesn't do that until weight of the column isnot set to 1.
+
+I used 'LabelFrame' in line 37. It is very similar to Frame but we can add framename as i did in line 37 with text="File Details".
+
+
