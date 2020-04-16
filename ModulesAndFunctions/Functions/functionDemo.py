@@ -30,6 +30,7 @@ def centered_file(*args, sep=' '):
     m_argin = (80 - len(text))
     return " " * m_argin + text
 
+
 with open("menu", 'w') as menu:
     print(centered_file("Spam and eggs"), file=menu)
     s1 = centered_file("Timri aama ko xoro hau timi")
