@@ -1,3 +1,4 @@
+# Black Jack Game in 188 lines of code
 import random
 import tkinter
 
