@@ -1,5 +1,7 @@
 class Kettle(object):
 
+    power_source = "Electricity"
+
     def __init__(self, make, price):
         self.make = make
         self.price = price
@@ -45,3 +47,23 @@ print("=" * 80)
 
 kenwood.power = 10
 print(kenwood.power)
+
+# print(hamilton.power) // It prints error or we can say program stops running at line49
+
+print(Kettle.power_source)
+print(kenwood.power_source)
+print(hamilton.power_source)
+print("\n")
+print("Switching to atomic")
+Kettle.power_source = "Atomic"
+# if the value of global variable of class is changed whole methods gonna suffer it.
+print(Kettle.power_source)
+print(kenwood.power_source)
+print(hamilton.power_source)
+print("\n")
+print("Switching to organic")
+kenwood.power_source = "Organic"
+# if the value of local variable is changed, only that local variable containing method gonna suffer it.
+print(Kettle.power_source)
+print(kenwood.power_source)
+print(hamilton.power_source)
