@@ -9,31 +9,31 @@ class Account:
         return pytz.utc.localize(utc_time)
 
     def __init__(self, name, balance):
-        self.name = name
-        self.balance = balance
-        self.transaction_list =[]
-        print("{}, your account is created and your current balance is {}.".format(self.name, self.balance))
-        # self.show_balance()
+        self._name = name
+        self._balance = balance
+        self._transaction_list =[(Account._current_time(), balance)]
+        print("{}, your account is created.".format(self._name, self._balance))
+        self.show_balance()
 
     def deposit(self, amount):
         if amount > 0:
-            self.balance += amount
+            self._balance += amount
             self.show_balance()
-            self.transaction_list.append((Account._current_time(), amount))
+            self._transaction_list.append((Account._current_time(), amount))
 
     def withdraw(self, amount):
-        if 0 < amount < self.balance:
-            self.balance -= amount
-            self.transaction_list.append((Account._current_time(), -amount))
+        if 0 < amount < self._balance:
+            self._balance -= amount
+            self._transaction_list.append((Account._current_time(), -amount))
         else:
             print("You withdrawing amount must be less than your current balance. Thank You")
         self.show_balance()
 
     def show_balance(self):
-        print("Dear {0}, your balance is {1}.".format(self.name, self.balance))
+        print("Dear {0}, your balance is {1}.".format(self._name, self._balance))
 
     def show_transaction(self):
-        for date, amount in self.transaction_list:
+        for date, amount in self._transaction_list:
             if amount > 0:
                 tran_type = "deposited"
             else:
