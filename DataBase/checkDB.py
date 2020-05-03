@@ -2,10 +2,13 @@ import sqlite3
 
 conn = sqlite3.connect('contact.sqlite')
 
-for name, phone, email in conn.execute("SELECT * FROM contact"):
-    print(name)
-    print(phone)
-    print(email)
+name1 = input("Please enter the name: ")
+# cursor = conn.cursor()
+
+
+for row in conn.execute("SELECT * FROM contact WHERE name LIKE ?", (name1,)):
+    print(row)
     print("-" * 20)
 
+# cursor.close()
 conn.close()
