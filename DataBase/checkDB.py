@@ -12,3 +12,8 @@ for row in conn.execute("SELECT * FROM contact WHERE name LIKE ?", (name1,)):
 
 # cursor.close()
 conn.close()
+
+
+
+
+

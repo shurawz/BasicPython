@@ -1,56 +1,11 @@
 import sqlite3
-
-db = sqlite3.connect("contact.sqlite")
-
-# new_email = "otherupdate@uup.date"
-# phone = input("Please enter your number.")
-#
-# update_sql = "UPDATE contact SET email = '{}' WHERE phone = {}".format(new_email, phone) #placeholders
-# print(update_sql)
-#
-# update_cursor = db.cursor()
-# update_cursor.executescript(update_sql)
-
-# For the complex programs I guess, actually solution for how to use the placeholders
-new_email = "newmail@up.date"
-phone = input("Please enter your number.")
-
-update_sql = "UPDATE contact SET email = ? WHERE phone = ?" #placeholders
-print(update_sql)
-
-update_cursor = db.cursor()
-update_cursor.execute(update_sql, (new_email, phone))
-
-
-
-print("{} row updated.".format(update_cursor.rowcount))
-
-update_cursor.connection.commit()
-update_cursor.close()
-
-for name, phone, email in db.execute("SELECT * FROM contact"):
-    print(name)
-    print(phone)
-    print(email)
-    print("-" * 20)
-
-# db.commit()
-db.close()
-
-# It is okay to call commit function either of the cursor and db
-# But in complex programs we make many functions, for each function, particular commit funtion should be used
-# To avoid bugs.
-
-
-
-import sqlite3
 import pytz
 import datetime
 
 # "https://www.sqlite.org/databyte3.html" if we want to study more on this topic click the link right behind this
 # sentence
 
-db = sqlite3.connect("accounts.sqlite")
+db = sqlite3.connect("accounting.sqlite")
 db.execute("CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)")
 db.execute("CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL, "
            "account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))")
@@ -60,7 +15,7 @@ class Account(object):
 
     @staticmethod
     def _current_time():
-        return pytz.utc.localize(datetime.datetime.utcnow())
+        return pytz.utc.localize(datetime.datetime.now())
 
     def __init__(self, name: str, opening_balance: int = 0):
         cursor = db.execute("SELECT name, balance FROM accounts WHERE (name = ?)", (name,))
