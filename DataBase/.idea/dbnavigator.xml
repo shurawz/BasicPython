@@ -82,14 +82,14 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="C:\Users\Suraj Gotamey\Desktop\BasicPython\DataBase\RollingBack\accounts.sqlite" schema="main" />
+            <file path="C:\Users\Suraj Gotamey\Desktop\BasicPython\DataBase\RollingBack\accounting.sqlite" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
           <deprecated-pwd value="" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />
