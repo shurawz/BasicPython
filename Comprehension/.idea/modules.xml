@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Comprehension.iml" filepath="$PROJECT_DIR$/Comprehension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NestedComprehension/NestedComprehension.iml" filepath="$PROJECT_DIR$/NestedComprehension/NestedComprehension.iml" />
     </modules>
   </component>
 </project>
